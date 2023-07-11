@@ -1,0 +1,339 @@
+@charset "UTF-8";
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeLeft {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(50px, 0, 0);
+            transform: translate3d(50px, 0, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@keyframes fadeLeft {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(50px, 0, 0);
+            transform: translate3d(50px, 0, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@-webkit-keyframes fadeRight {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(-50px, 0, 0);
+            transform: translate3d(-50px, 0, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@keyframes fadeRight {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(-50px, 0, 0);
+            transform: translate3d(-50px, 0, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@-webkit-keyframes fadeUp {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@keyframes fadeUp {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@-webkit-keyframes fadeDown {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@keyframes fadeDown {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@-webkit-keyframes bgAnime {
+0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+}
+100% {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+}
+}
+
+@keyframes bgAnime {
+0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+}
+100% {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+}
+}
+
+@-webkit-keyframes textAnime {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+@keyframes textAnime {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+@-webkit-keyframes scroller {
+0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+}
+15% {
+    -webkit-transform: translate3d(0, -98%, 0);
+            transform: translate3d(0, -98%, 0);
+}
+85% {
+    -webkit-transform: translate3d(0, 98%, 0);
+            transform: translate3d(0, 98%, 0);
+}
+100% {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+}
+}
+
+@keyframes scroller {
+0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+}
+15% {
+    -webkit-transform: translate3d(0, -98%, 0);
+            transform: translate3d(0, -98%, 0);
+}
+85% {
+    -webkit-transform: translate3d(0, 98%, 0);
+            transform: translate3d(0, 98%, 0);
+}
+100% {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+}
+}
+
+@-webkit-keyframes slideInImg {
+100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+}
+}
+
+@keyframes slideInImg {
+100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+}
+}
+
+* {
+margin: 0;
+padding: 0;
+}
+
+h1 {
+font-size: 1em;
+font-weight: normal;
+margin: 0;
+}
+
+h2 {
+font-size: 1em;
+font-weight: normal;
+margin: 0;
+}
+
+h3 {
+font-size: 1em;
+font-weight: normal;
+margin: 0;
+}
+
+h4 {
+font-size: 1em;
+font-weight: normal;
+margin: 0;
+}
+
+h5 {
+font-size: 1em;
+font-weight: normal;
+margin: 0;
+}
+
+h6 {
+font-size: 1em;
+font-weight: normal;
+margin: 0;
+}
+
+ul li, ol li {
+list-style: none;
+}
+
+a {
+color: #23366f;
+text-decoration: none;
+outline: none;
+}
+
+/*ユニークここから*/
+.popup-header, .popup-footer {
+display: none;
+}
+
+/*header*/
+.l-Header, .l-Header--Simple {
+width: 100%;
+background: #fff;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 9;
+}
+.l-Header--Simple {
+    width: auto;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: static;
+    }
+.l-Header--Simple .l-Header__Inner {
+    height: auto;
+    padding: 0;
+    }
+
+@media print, screen and (max-width: 750px) {
+    .l-Header, .l-Header--Simple {
+        height: 14.66vw;
+    }
+    .l-Header--Simple {
+        padding-right: 5.33vw;
+        padding-left: 5.33vw;
+    }
+    .l-Header__Inner {
+        height: 100%;
+        padding: 0 5.33vw;
+    }
+}
+
+@media print, screen and (min-width: 751px) {
+    .l-Header--Simple {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media print, screen and (min-width: 751px) and (max-width: 1280px) {
+    .l-Header--Simple {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+
+    .l-Header__Inner {
+    position: relative;
+    }
+
+    .l-Header--Simple .l-Header__Inner {
+    height: auto;
+    padding: 0;
+    }
+}
+
+@media print, screen and (min-width: 751px) {
+.l-Header__Inner {
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: initial;
+    justify-content: space-between;
+    align-items: center;
+}
+}
+
+@media print, screen and (min-width: 981px) and (max-width: 1400px) {
+.l-Header__Inner {
+    padding: 0 20px;
+}
+}
+
+@media print, screen and (min-width: 751px) and (max-width: 980px) {
+
+}
