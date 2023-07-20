@@ -598,12 +598,18 @@ z-index: 9;
     margin-bottom: 40px !important;
 }
 .inner_wrap_03 {
-    font-size: 24px;
+    font-size: 20px;
 }
 .Internal-review-number{
     padding-top: 60px;
 }
-
+.small_wrapper {
+    font-size: 12px;
+    line-height: 1.5;
+}
+.small_wrapper .bulett_point{
+    padding-left: 0.5em;
+}
 @media print, screen and (max-width: 750px){
     .l-NumberList{
         padding-bottom: 0px;
@@ -618,7 +624,7 @@ z-index: 9;
         margin-bottom: 10.66vw;
     }
     .inner_wrap_02 {
-        font-size: 6.4vw;
+        font-size: 5.33vw;
     }
 }
 
