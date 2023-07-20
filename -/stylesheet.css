@@ -209,9 +209,11 @@ padding: 0;
 }
 
 h1 {
-font-size: 1em;
 font-weight: normal;
 margin: 0;
+font-size: 23px;
+line-height: 1.4em;
+font-weight: bold;
 }
 
 h2 {
@@ -253,13 +255,31 @@ color: #23366f;
 text-decoration: none;
 outline: none;
 }
-
+body {
+    width: inherit;
+    height: inherit;
+    min-width: 320px;
+    color: #555;
+    font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-weight: normal;
+    line-height: 1.8;
+    word-break: break-all;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-feature-settings: 'palt';
+    font-feature-settings: 'palt';
+    position: relative;
+}
 /*ユニークここから*/
 .popup-header, .popup-footer {
 display: none;
 }
 
 /*header*/
+.l-Section--Small{
+    padding-bottom: 80px;
+}
 .l-Header, .l-Header--Simple {
 width: 100%;
 background: #fff;
@@ -279,8 +299,81 @@ z-index: 9;
     height: auto;
     padding: 0;
     }
+.l-Header__Inner {
+    position: relative;
+    }
+.l-Header__Logo--Img {
+    width: 100%;
+}
+.l-Header__Inner {
+    position: relative;
+    }
+.l-Header--Simple .l-Header__Inner {
+    height: auto;
+    padding: 0;
+}
+.l-Header__Logo {
+    position: absolute;
+    z-index: 3;
+    transition: all 0.2s ease;
+}
+.l-Header--Simple .l-Header__Logo {
+    position: static;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+}
+.l-Header, .l-Header--Simple {
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+.l-Header--Simple {
+    width: auto;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: static;
+}
+.l-Header__Logo--Link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    }
+.l-Header__Logo--Img {
+    width: 100%;
+    }
+.l-Mainvisual--Bg .l-Mainvisual__Text, .l-Mainvisual--Bg .l-Mainvisual__Text--White {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.l-Mainvisual__Text, .l-Mainvisual__Text--White {
+    width: 100%;
+    font-weight: normal;
+    color: #23366f;
+    line-height: 1.8;
+}
+.l-Inner--1140 {
+    max-width: 1140px;
+    box-sizing: content-box;
+    margin-right: auto;
+    margin-left: auto;
+}
 
+    /* MAXC 750 */
 @media print, screen and (max-width: 750px) {
+    .l-Section--Small{
+        padding-bottom: 10.66vw;
+    }
     .l-Header, .l-Header--Simple {
         height: 14.66vw;
     }
@@ -292,15 +385,97 @@ z-index: 9;
         height: 100%;
         padding: 0 5.33vw;
     }
+    .l-Header, .l-Header--Simple {
+        height: 14.66vw;
+    }
+    .l-Header__Logo--Img {
+        max-width: 36.26vw;
+    }
+    .l-Header__Logo--Img {
+        max-width: 36.26vw;
+    }
+    .l-Header--Simple {
+        padding-right: 5.33vw;
+        padding-left: 5.33vw;
+    }
+    .l-Header__Logo {
+        width: 25.06vw;
+        left: 4.8vw;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+    }
+    .l-Header__Logo--Text {
+        display: none;
+    }
 }
 
+
+/* MIN 751 */
 @media print, screen and (min-width: 751px) {
+    .l-Header__Inner {
+        padding: 0 50px;
+        display: flex;
+        flex-wrap: initial;
+        justify-content: space-between;
+        align-items: center;
+    }
     .l-Header--Simple {
         padding-right: 40px;
         padding-left: 40px;
     }
+    .l-Header__Logo--Text {
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    .l-Header__Logo--Img {
+        max-width: 304px;
+    }
+    .l-Header--Simple .l-Header__Logo--Img {
+        max-width: 150px;
+    }
+    .l-Header__Logo--Img {
+        max-width: 304px;
+    }
+    .l-Header--Simple .l-Header__Logo--Img {
+        max-width: 150px;
+    }
+    .l-Header--Simple {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .l-Header__Logo {
+        min-width: 285px;
+        top: 20px;
+        left: 35px;
+    }
+    .l-Header--Simple .l-Header__Logo {
+        min-width: 100%;
+    }
 }
 
+/* MAX 1280 */
+@media print, screen and (min-width: 751px) and (max-width: 1280px) {
+    .l-Header--Simple {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    }
+
+/* MAX 1400 */
+@media print, screen and (min-width: 981px) and (max-width: 1400px) {
+.l-Header__Inner {
+    padding: 0 20px;
+}
+.l-Header__Logo {
+    min-width: 20.35vw;
+    top: 1.42vw;
+    left: 1.42vw;
+}
+}
+
+/* 715 - 1280 */
 @media print, screen and (min-width: 751px) and (max-width: 1280px) {
     .l-Header--Simple {
         padding-right: 30px;
@@ -318,22 +493,111 @@ z-index: 9;
     }
 }
 
-@media print, screen and (min-width: 751px) {
-.l-Header__Inner {
-    padding: 0 50px;
-    display: flex;
-    flex-wrap: initial;
-    justify-content: space-between;
-    align-items: center;
-}
-}
-
-@media print, screen and (min-width: 981px) and (max-width: 1400px) {
-.l-Header__Inner {
-    padding: 0 20px;
-}
-}
+/* MIN 751 - MAX980 */
 
 @media print, screen and (min-width: 751px) and (max-width: 980px) {
+    .l-Header__Logo--Img {
+        width: 100%;
+    }
+    .l-Header__Logo--Img {
+        max-width: 40.81vw;
+    }
+    .l-Header__Logo {
+        min-width: 29.08vw;
+        margin-top: 2.04vw;
+        position: static;
+        top: 0;
+        left: 0;
+    }
+    .l-Header__Logo {
+        min-width: 29.08vw;
+        margin-top: 2.04vw;
+        position: static;
+        top: 0;
+        left: 0;
+    }
+    .l-Header__Logo--Text {
+        margin-left: 1.02vw;
+        font-size: 1.53vw;
+    }
+}
 
+/* MIN 981 - MAX1400 */
+
+@media print, screen and (min-width: 981px) and (max-width: 1400px) {
+    .l-Header__Logo--Img {
+        max-width: 21.71vw;
+    }
+    .l-Header__Logo--Text {
+        margin-left: 0.71vw;
+        font-size: 1.07vw;
+    }
+    .l-Header__Logo--Img {
+        max-width: 21.71vw;
+    }
+}
+
+
+
+/* MAIN CONTENT */
+
+.l-Mainvisual--Bg {
+    height: 240px;
+    background: #F4F7FE;
+    text-align: center;
+}
+.l-Mainvisual--Bg .l-Mainvisual__Text, .l-Mainvisual--Bg .l-Mainvisual__Text--White {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.l-Mainvisual__Text, .l-Mainvisual__Text--White {
+    width: 100%;
+    font-weight: normal;
+    color: #23366f;
+    line-height: 1.8;
+}
+.l-Mainvisual--Bg .l-Mainvisual__Title--Small {
+    font-size: 7.46vw;
+    font-weight: normal;
+}
+
+@media print, screen and (max-width: 750px){
+    .l-Mainvisual--Bg {
+        height: 53.33vw;
+    }
+    .l-Mainvisual--Bg .l-Mainvisual__Title--Small {
+        font-size: 7.46vw;
+    }
+}
+
+
+
+
+
+.l-NumberList{
+    padding-bottom: 120px;
+}
+.l-Inner--760 {
+    padding-right: 5.33vw;
+    padding-left: 5.33vw;
+}
+.inner_wrap_02 {
+    font-size: 32px;
+}
+.inner_wrap_03 {
+    font-size: 24px;
+}
+.l-Inner--760, .heading_02::before {
+    counter-increment: number 1;
+    content: counter(number) ".";
+    display: block;
+}
+
+@media print, screen and (max-width: 750px){
+    .l-NumberList{
+        padding-bottom: 0px;
+    }
 }
