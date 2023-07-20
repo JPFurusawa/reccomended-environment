@@ -223,7 +223,7 @@ margin: 0;
 }
 
 h3 {
-font-size: 1em;
+font-size: 16px;
 font-weight: normal;
 margin: 0;
 }
@@ -244,6 +244,12 @@ h6 {
 font-size: 1em;
 font-weight: normal;
 margin: 0;
+}
+
+p {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
 }
 
 ul li, ol li {
@@ -369,14 +375,14 @@ z-index: 9;
     margin-left: auto;
 }
 
-    /* MAXC 750 */
+    /* MAX 750 */
 @media print, screen and (max-width: 750px) {
     .l-Section--Small{
         padding-bottom: 10.66vw;
     }
-    .l-Header, .l-Header--Simple {
+    /* .l-Header, .l-Header--Simple {
         height: 14.66vw;
-    }
+    } */
     .l-Header--Simple {
         padding-right: 5.33vw;
         padding-left: 5.33vw;
@@ -385,18 +391,8 @@ z-index: 9;
         height: 100%;
         padding: 0 5.33vw;
     }
-    .l-Header, .l-Header--Simple {
-        height: 14.66vw;
-    }
     .l-Header__Logo--Img {
         max-width: 36.26vw;
-    }
-    .l-Header__Logo--Img {
-        max-width: 36.26vw;
-    }
-    .l-Header--Simple {
-        padding-right: 5.33vw;
-        padding-left: 5.33vw;
     }
     .l-Header__Logo {
         width: 25.06vw;
@@ -560,7 +556,7 @@ z-index: 9;
     line-height: 1.8;
 }
 .l-Mainvisual--Bg .l-Mainvisual__Title--Small {
-    font-size: 7.46vw;
+    font-size: 42px;
     font-weight: normal;
 }
 
@@ -584,20 +580,81 @@ z-index: 9;
     padding-right: 5.33vw;
     padding-left: 5.33vw;
 }
+.top_container{
+    margin-bottom: 40px;
+}
+.container {
+    margin-bottom: 18px;
+}
+.heading_02 {
+    margin-bottom: 40px ;
+}
+.inner_wrap p{
+    margin-bottom: 30px;
+}
 .inner_wrap_02 {
     font-size: 32px;
+    color: #23366f;
+    margin-bottom: 40px !important;
 }
 .inner_wrap_03 {
     font-size: 24px;
 }
-.l-Inner--760, .heading_02::before {
+/* .l-Inner--760, .heading_02::before {
     counter-increment: number 1;
     content: counter(number) ".";
     display: block;
-}
+} */
 
 @media print, screen and (max-width: 750px){
     .l-NumberList{
         padding-bottom: 0px;
+    }
+    .top_container{
+        margin-bottom: 10.66vw;
+    }
+    .heading_02 {
+        margin-bottom: 10.66vw ;
+    }
+    .container {
+        margin-bottom: 10.66vw;
+    }
+    .inner_wrap_02 {
+        font-size: 6.4vw;
+    }
+}
+
+
+
+
+
+/* footer start */
+.footer_container {
+    line-height: 1.8;
+    background-color: #dae2f4;
+    width: auto;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: static;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.footer_copy {
+    color: #23366f;
+    line-height: 1.5;
+    text-align: center;
+    font-family: "Arial", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+
+@media print, screen and (max-width: 750px){
+    .footer_container{
+        margin-top: 16vw;
+        padding-top: 5.33vw;
+        padding-bottom: 5.33vw;
+    }
+    .footer_copy {
+        margin-top: 0;
+        font-size: 3.46vw;
     }
 }
