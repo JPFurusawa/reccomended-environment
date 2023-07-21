@@ -537,6 +537,7 @@ z-index: 9;
 
 /* MAIN CONTENT */
 
+/* Title */
 .l-Mainvisual--Bg {
     height: 240px;
     background: #F4F7FE;
@@ -569,16 +570,17 @@ z-index: 9;
     }
 }
 
-
-
-
-
+/* contents */
 .l-NumberList{
     padding-bottom: 120px;
 }
 .l-Inner--760 {
-    padding-right: 5.33vw;
-    padding-left: 5.33vw;
+    padding-right: 40PX;
+    padding-left: 40PX;
+    max-width: 760px;
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
 }
 .top_container{
     margin-bottom: 40px;
@@ -586,8 +588,12 @@ z-index: 9;
 .container {
     margin-bottom: 18px;
 }
+.inner_wrap {
+    padding-bottom: 30px;
+}
 .heading_02 {
-    margin-bottom: 40px ;
+    margin-bottom: 30px ;
+    margin-top: 30px;
 }
 .inner_wrap p{
     margin-bottom: 30px;
@@ -611,20 +617,25 @@ z-index: 9;
     padding-left: 0.5em;
 }
 @media print, screen and (max-width: 750px){
+    .l-Inner--760 {
+        padding-right: 5.33vw;
+        padding-left: 5.33vw;
+    }
     .l-NumberList{
         padding-bottom: 0px;
     }
-    .top_container{
-        margin-bottom: 10.66vw;
-    }
     .heading_02 {
-        margin-bottom: 10.66vw ;
+        margin-bottom: 8.5vw ;
+        margin-top: 8.5vw;
     }
     .container {
         margin-bottom: 10.66vw;
     }
     .inner_wrap_02 {
         font-size: 5.33vw;
+    }
+    .inner_wrap_03 {
+        font-size: 5vw;
     }
 }
 
