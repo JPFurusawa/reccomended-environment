@@ -37,3 +37,12 @@ button, input {
     padding: 24px 0;
     align-items: center;
 }
+.icon {
+    display: flex;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+    padding: 24px 0;
+    align-items: center;
+}
