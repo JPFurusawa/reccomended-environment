@@ -557,7 +557,7 @@ z-index: 9;
     .accordion-details summary::-webkit-details-marker {
         display: none;
     }
-    .accordion-003 summary::after {
+    .accordion-details summary::after {
         transform: translateY(-25%) rotate(45deg);
         width: 7px;
         height: 7px;
@@ -568,11 +568,11 @@ z-index: 9;
         transition: transform .3s;
     }
     
-    .accordion-003[open] summary::after {
+    .accordion-details[open] summary::after {
         transform: rotate(225deg);
     }
     
-    .accordion-003 p {
+    .accordion-details p {
         transform: translateY(-10px);
         opacity: 0;
         margin: 0;
@@ -581,7 +581,7 @@ z-index: 9;
         transition: transform .5s, opacity .5s;
     }
     
-    .accordion-003[open] p {
+    .accordion-details[open] p {
         transform: none;
         opacity: 1;
     }
