@@ -539,9 +539,10 @@ z-index: 9;
 
 /* メイン */
 
-
     .accordion-details {
-    
+        max-width: 500px;
+        margin-bottom: 7px;
+        border-bottom: 2px solid #d6dde3;
     }
     .accordion-details summary {
         display: flex;
