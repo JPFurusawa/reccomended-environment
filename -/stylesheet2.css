@@ -1,44 +1,409 @@
-.accordion-details {
-    
+@charset "UTF-8";
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-.accordion-details  summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 1em 2em;
-    color: #333333;
-    font-weight: 600;
-    cursor: pointer;
-}
-.accordion-details  summary::-webkit-details-marker {
-    display: none;
-}
-.accordion-003 summary::after {
-    transform: translateY(-25%) rotate(45deg);
-    width: 7px;
-    height: 7px;
-    margin-left: 10px;
-    border-bottom: 3px solid #333333b3;
-    border-right: 3px solid #333333b3;
-    content: '';
-    transition: transform .3s;
-}
-
-.accordion-003[open] summary::after {
-    transform: rotate(225deg);
-}
-
-.accordion-003 p {
-    transform: translateY(-10px);
+@-webkit-keyframes fadeLeft {
+from {
     opacity: 0;
-    margin: 0;
-    padding: .3em 2em 1.5em;
-    color: #333333;
-    transition: transform .5s, opacity .5s;
+    -webkit-transform: translate3d(50px, 0, 0);
+            transform: translate3d(50px, 0, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
 }
 
-.accordion-003[open] p {
-    transform: none;
+@keyframes fadeLeft {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(50px, 0, 0);
+            transform: translate3d(50px, 0, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@-webkit-keyframes fadeRight {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(-50px, 0, 0);
+            transform: translate3d(-50px, 0, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@keyframes fadeRight {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(-50px, 0, 0);
+            transform: translate3d(-50px, 0, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@-webkit-keyframes fadeUp {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@keyframes fadeUp {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@-webkit-keyframes fadeDown {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@keyframes fadeDown {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+}
+
+@-webkit-keyframes bgAnime {
+0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+}
+100% {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+}
+}
+
+@keyframes bgAnime {
+0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+}
+100% {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+}
+}
+
+@-webkit-keyframes textAnime {
+0% {
+    opacity: 0;
+}
+100% {
     opacity: 1;
 }
+}
+
+@keyframes textAnime {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+@-webkit-keyframes scroller {
+0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+}
+15% {
+    -webkit-transform: translate3d(0, -98%, 0);
+            transform: translate3d(0, -98%, 0);
+}
+85% {
+    -webkit-transform: translate3d(0, 98%, 0);
+            transform: translate3d(0, 98%, 0);
+}
+100% {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+}
+}
+
+@keyframes scroller {
+0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+}
+15% {
+    -webkit-transform: translate3d(0, -98%, 0);
+            transform: translate3d(0, -98%, 0);
+}
+85% {
+    -webkit-transform: translate3d(0, 98%, 0);
+            transform: translate3d(0, 98%, 0);
+}
+100% {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+}
+}
+
+@-webkit-keyframes slideInImg {
+100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+}
+}
+
+@keyframes slideInImg {
+100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+}
+}
+
+* {
+margin: 0;
+padding: 0;
+}
+
+h1 {
+font-weight: normal;
+margin: 0;
+font-size: 23px;
+line-height: 1.4em;
+font-weight: bold;
+}
+
+h2 {
+font-size: 1em;
+font-weight: normal;
+margin: 0;
+}
+
+h3 {
+font-size: 16px;
+font-weight: normal;
+margin: 0;
+}
+
+h4 {
+font-size: 1em;
+font-weight: normal;
+margin: 0;
+}
+
+h5 {
+font-size: 1em;
+font-weight: normal;
+margin: 0;
+}
+
+h6 {
+font-size: 1em;
+font-weight: normal;
+margin: 0;
+}
+
+p {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+ul li, ol li {
+list-style: none;
+}
+
+a {
+color: #23366f;
+text-decoration: none;
+outline: none;
+}
+body {
+    width: inherit;
+    height: inherit;
+    min-width: 320px;
+    color: #555;
+    font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-weight: normal;
+    line-height: 1.8;
+    word-break: break-all;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-feature-settings: 'palt';
+    font-feature-settings: 'palt';
+    position: relative;
+}
+/*ユニークここから*/
+.popup-header, .popup-footer {
+display: none;
+}
+
+/*header*/
+.l-Section--Small{
+    padding-bottom: 80px;
+}
+.l-Header, .l-Header--Simple {
+width: 100%;
+background: #fff;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 9;
+}
+.l-Header--Simple {
+    width: auto;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: static;
+    }
+.l-Header--Simple .l-Header__Inner {
+    height: auto;
+    padding: 0;
+    }
+.l-Header__Inner {
+    position: relative;
+    }
+.l-Header__Logo--Img {
+    width: 100%;
+}
+.l-Header__Inner {
+    position: relative;
+    }
+.l-Header--Simple .l-Header__Inner {
+    height: auto;
+    padding: 0;
+}
+.l-Header__Logo {
+    position: absolute;
+    z-index: 3;
+    transition: all 0.2s ease;
+}
+.l-Header--Simple .l-Header__Logo {
+    position: static;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+}
+.l-Header, .l-Header--Simple {
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+.l-Header--Simple {
+    width: auto;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: static;
+}
+.l-Header__Logo--Link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    }
+.l-Header__Logo--Img {
+    width: 100%;
+    }
+
+
+
+
+
+/* メイン */
+
+
+    .accordion-details {
+    
+    }
+    .accordion-details summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 1em 2em;
+        color: #333333;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .accordion-details summary::-webkit-details-marker {
+        display: none;
+    }
+    .accordion-003 summary::after {
+        transform: translateY(-25%) rotate(45deg);
+        width: 7px;
+        height: 7px;
+        margin-left: 10px;
+        border-bottom: 3px solid #333333b3;
+        border-right: 3px solid #333333b3;
+        content: '';
+        transition: transform .3s;
+    }
+    
+    .accordion-003[open] summary::after {
+        transform: rotate(225deg);
+    }
+    
+    .accordion-003 p {
+        transform: translateY(-10px);
+        opacity: 0;
+        margin: 0;
+        padding: .3em 2em 1.5em;
+        color: #333333;
+        transition: transform .5s, opacity .5s;
+    }
+    
+    .accordion-003[open] p {
+        transform: none;
+        opacity: 1;
+    }
