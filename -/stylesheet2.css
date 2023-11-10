@@ -46,3 +46,11 @@ button, input {
     padding: 24px 0;
     align-items: center;
 }
+
+
+.accordion-body {
+
+}
+.accordion-body::webkit-details-marker {
+    display: none;
+}
