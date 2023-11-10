@@ -544,7 +544,7 @@ z-index: 9;
 /* Title */
 .l-Mainvisual--Bg {
     height: 240px;
-    background: #F4F7FE;
+    background: #f6f6f6;
     text-align: center;
 }
 .l-Mainvisual--Bg .l-Mainvisual__Text, .l-Mainvisual--Bg .l-Mainvisual__Text--White {
