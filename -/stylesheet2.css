@@ -540,6 +540,41 @@ z-index: 9;
 
 /* メイン */
 
+/* タイトル箇所 */
+/* Title */
+.l-Mainvisual--Bg {
+    height: 240px;
+    background: #F4F7FE;
+    text-align: center;
+}
+.l-Mainvisual--Bg .l-Mainvisual__Text, .l-Mainvisual--Bg .l-Mainvisual__Text--White {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.l-Mainvisual__Text, .l-Mainvisual__Text--White {
+    width: 100%;
+    font-weight: normal;
+    color: #23366f;
+    line-height: 1.8;
+}
+.l-Mainvisual--Bg .l-Mainvisual__Title--Small {
+    font-size: 42px;
+    font-weight: normal;
+}
+
+@media print, screen and (max-width: 750px){
+    .l-Mainvisual--Bg {
+        height: 53.33vw;
+    }
+    .l-Mainvisual--Bg .l-Mainvisual__Title--Small {
+        font-size: 7.46vw;
+    }
+}
+/* タイトル箇所 */
+
     .accordion-details {
         max-width: 500px;
         margin-bottom: 7px;
