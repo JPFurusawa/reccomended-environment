@@ -537,6 +537,7 @@ z-index: 9;
 
 
 
+
 /* メイン */
 
     .accordion-details {
@@ -585,3 +586,36 @@ z-index: 9;
         transform: none;
         opacity: 1;
     }
+
+
+
+    /* footer start */
+.footer_container {
+    line-height: 1.8;
+    background-color: #dae2f4;
+    width: auto;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: static;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.footer_copy {
+    color: #23366f;
+    line-height: 1.5;
+    text-align: center;
+    font-family: "Arial", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+
+@media print, screen and (max-width: 750px){
+    .footer_container{
+        margin-top: 16vw;
+        padding-top: 5.33vw;
+        padding-bottom: 5.33vw;
+    }
+    .footer_copy {
+        margin-top: 0;
+        font-size: 3.46vw;
+    }
+}
