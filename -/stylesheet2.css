@@ -543,7 +543,7 @@ z-index: 9;
 /* タイトル箇所 */
 /* Title */
 .l-Mainvisual--Bg {
-    height: 240px;
+    height: 90px;
     background: #f6f6f6;
     text-align: left;
     margin-bottom: 40px;
@@ -562,7 +562,7 @@ z-index: 9;
     line-height: 1.8;
 }
 .l-Mainvisual--Bg .l-Mainvisual__Title--Small {
-    font-size: 42px;
+    font-size: 32px;
     font-weight: bold;
 }
 
@@ -584,12 +584,12 @@ z-index: 9;
     padding: 0 2%;
     margin: 0 auto;
 }
-@media only screen and (max-width: 767px) #popup-template {
+/* @media only screen and (max-width: 767px) #popup-template {
     .main-content-wrap {
         padding-right: 4%;
         padding-left: 4%;
         margin-bottom: 30px;
-    }
+    } */
 }
 h3 {
     font-size: 16px;
@@ -626,7 +626,7 @@ h3 {
     line-height: 1.4;
 }
 
-@media only screen and (max-width: 767px) {
+ @media only screen and (max-width: 767px) {
     .heading {
         padding-right: 4%;
         padding-left: 4%;
@@ -642,14 +642,6 @@ h3 {
     margin: 0px auto 40px;
 }
 
-@media only screen and (max-width: 767px){
-    .container {
-        padding-right: 4%;
-        padding-left: 4%;
-        margin-bottom: 30px;
-}
-}
-
 .container .inner-wrap {
     display: block;
     max-width: 950px;
@@ -662,20 +654,18 @@ h3 {
 .accordion-faq {
     background-color: #fff;
     box-sizing: border-box;
-    border: 4px solid #f2f2f2;
+    /* border: 4px solid #f2f2f2; */
     padding: 10px;
     margin: 0px auto 60px;
 }
 @media only screen and (max-width: 767px){
-    .contractor_faq .question {
-        background-color: #fff;
-        box-sizing: border-box;
-        border: 2px solid #f2f2f2;
-        padding: 20px 4.34783%;
+    .contractor_faq {
+        padding: 10px 0;
     }
 }
 
-.accordion-details summary::before {
+/* BEFORE */
+/* .accordion-details summary::before {
     content: 'Q.';
     color: #009ee0;
     padding-right: 1rem;
@@ -683,6 +673,7 @@ h3 {
 .accordion-details p::before {
     content: 'A.';
     color: #ea635c;
+    padding-right: 1rem;
 }
 
 .accordion-details summary::before
@@ -691,38 +682,34 @@ h3 {
     top: 0;
     left: 0;
     font-weight: bold;
-}
+} */
 
 .accordion-details {
     /* max-width: 500px; */
     margin-bottom: 7px;
-    border-bottom: 2px solid #d6dde3;
+    border-bottom: 1px solid #91bfe3;
 }
 .accordion-details summary {
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
     position: relative;
-    padding: 1em 2em;
-    color: #333333;
+    padding: 24px 48px 24px 2px;
+    color: #2167ae;
     /* font-weight: 600; */
     cursor: pointer;
-    font-size: 0.8125rem;
-    font-weight: bold;
+    font-size: 1rem;
+    /* font-weight:; */
+    
 }
 @media only screen and (min-width: 768px){
-    .accordion-details summary, .accordion-details p {
+    .accordion-details summary {
+        font-size: 1rem;
+    }
+    .accordion-details p {
         font-size: 1rem;
     }
 }
-
-
-.accordion-details summary .q {
-padding-left: 2rem;
-font-size: 0.8125rem;
-font-weight: bold;
-}
-
 
 
 .accordion-details summary::-webkit-details-marker {
@@ -730,33 +717,39 @@ font-weight: bold;
 }
 .accordion-details summary::after {
     transform: translateY(-25%) rotate(45deg);
-    width: 7px;
-    height: 7px;
+    width: 9px;
+    height: 9px;
     margin-left: 10px;
-    border-bottom: 3px solid #333333b3;
-    border-right: 3px solid #333333b3;
+    border-bottom: 2px solid #2167ae;
+    border-right: 2px solid #2167ae;
     content: '';
     transition: transform .3s;
     position: absolute;
     right: 0;
+    line-height: normal;
 }
 
 .accordion-details[open] summary::after {
     transform: rotate(225deg);
+    outline: none;
 }
 
 .accordion-details p {
     transform: translateY(-10px);
     opacity: 0;
     margin: 0;
-    padding: 1em 2em;
-    color: #333333;
-    transition: transform .5s, opacity .5s;
+    padding: 24px 48px 24px 2px;
+    color: #23366f;
+    transition: all .3s ease-in-out;
+    /* transition: transform .5s, opacity .5s; */
+    font-size: 1rem;
 }
 
 .accordion-details[open] p {
     transform: none;
     opacity: 1;
+    transition: all .3s ease-in-out;
+    animation: fadeIn 0.5s ease;
 }
 
 
