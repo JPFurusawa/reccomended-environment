@@ -660,7 +660,7 @@ h3 {
     background-color: #fff;
     box-sizing: border-box;
     border: 4px solid #f2f2f2;
-    padding: 30px;
+    padding: 10px;
 }
 @media only screen and (max-width: 767px){
     .contractor_faq .question {
@@ -717,6 +717,51 @@ h3 {
     .accordion-details[open] p {
         transform: none;
         opacity: 1;
+    }
+
+    /* service center */
+
+    .dial {
+        width: 100%;
+        overflow: hidden;
+        display: table;
+        border: solid 2px #ea635c;
+        box-sizing: border-box;
+        margin-bottom: 120px;
+    }
+    .dial .to_tb01 {
+        background: #ea635c;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        display: table-cell;
+        width: 41.14%;
+        vertical-align: middle;
+    }
+    .dial .to_tb02 {
+        text-align: center;
+        display: table-cell;
+        width: 58.86%;
+        vertical-align: middle;
+        padding: 13px;
+    }
+
+    @media only screen and (max-width: 767px){
+        .dial .to_tb02 {
+            border: solid 1px #ea635c;
+            display: block;
+            width: 100%;
+        }
+    }
+
+
+    @media only screen and (max-width: 767px){
+        .dial .to_tb01 {
+            font-size: 14px;
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+        }
     }
 
 
