@@ -675,17 +675,17 @@ h3 {
     }
 }
 
-.accordion-details .summary:before {
+.accordion-details .summary::before {
     content: 'Q.';
     color: #009ee0;
 }
-.accordion-details p:before {
+.accordion-details p::before {
     content: 'A.';
     color: #ea635c;
 }
 
-.accordion-details .summary:before
-.accordion-details p :before {
+.accordion-details .summary::before
+.accordion-details p::before {
     position: absolute;
     top: 0;
     left: 0;
