@@ -675,7 +675,7 @@ h3 {
     }
 }
 
-.accordion-details .summary:before {
+.accordion-details summary::before {
     content: 'Q.';
     color: #009ee0;
 }
@@ -684,7 +684,7 @@ h3 {
     color: #ea635c;
 }
 
-.accordion-details .summary:before
+.accordion-details summary::before
 .accordion-details p::before {
     position: absolute;
     top: 0;
@@ -706,6 +706,8 @@ h3 {
         color: #333333;
         font-weight: 600;
         cursor: pointer;
+        /*  */
+        padding-left: 2rem;
     }
     .accordion-details summary::-webkit-details-marker {
         display: none;
