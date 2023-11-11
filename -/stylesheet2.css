@@ -708,7 +708,7 @@ h3 {
         cursor: pointer;
     }
     .accordion-details summary .q {
-    padding-left: 10rem;
+    padding-left: 2rem;
     }
     .accordion-details summary::-webkit-details-marker {
         display: none;
