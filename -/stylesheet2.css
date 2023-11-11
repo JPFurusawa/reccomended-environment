@@ -650,6 +650,27 @@ h3 {
 }
 }
 
+.container .inner-wrap {
+    display: block;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.accordion-faq {
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 4px solid #f2f2f2;
+    padding: 30px;
+}
+@media only screen and (max-width: 767px){
+    .contractor_faq .question {
+        background-color: #fff;
+        box-sizing: border-box;
+        border: 2px solid #f2f2f2;
+        padding: 20px 4.34783%;
+    }
+}
+
 
     .accordion-details {
         max-width: 500px;
