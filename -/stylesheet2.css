@@ -678,6 +678,7 @@ h3 {
 .accordion-details summary::before {
     content: 'Q.';
     color: #009ee0;
+    padding-right: 1rem;
 }
 .accordion-details p::before {
     content: 'A.';
@@ -692,132 +693,155 @@ h3 {
     font-weight: bold;
 }
 
-    .accordion-details {
-        /* max-width: 500px; */
-        margin-bottom: 7px;
-        border-bottom: 2px solid #d6dde3;
+.accordion-details {
+    /* max-width: 500px; */
+    margin-bottom: 7px;
+    border-bottom: 2px solid #d6dde3;
+}
+.accordion-details summary {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: relative;
+    padding: 1em 2em;
+    color: #333333;
+    /* font-weight: 600; */
+    cursor: pointer;
+    font-size: 0.8125rem;
+    font-weight: bold;
+}
+@media only screen and (min-width: 768px){
+    .accordion-details summary, .accordion-details p {
+        font-size: 1rem;
     }
-    .accordion-details summary {
-        display: flex;
-        /* justify-content: space-between; */
-        align-items: center;
-        position: relative;
-        padding: 1em 2em;
-        color: #333333;
-        font-weight: 600;
-        cursor: pointer;
-    }
-    .accordion-details summary .q {
-    padding-left: 2rem;
-    }
-    .accordion-details summary::-webkit-details-marker {
-        display: none;
-    }
-    .accordion-details summary::after {
-        transform: translateY(-25%) rotate(45deg);
-        width: 7px;
-        height: 7px;
-        margin-left: 10px;
-        border-bottom: 3px solid #333333b3;
-        border-right: 3px solid #333333b3;
-        content: '';
-        transition: transform .3s;
-        position: absolute;
-        right: 0;
-    }
-    
-    .accordion-details[open] summary::after {
-        transform: rotate(225deg);
-    }
-    
-    .accordion-details p {
-        transform: translateY(-10px);
-        opacity: 0;
-        margin: 0;
-        padding: .3em 2em 1.5em;
-        color: #333333;
-        transition: transform .5s, opacity .5s;
-    }
-    
-    .accordion-details[open] p {
-        transform: none;
-        opacity: 1;
-    }
+}
 
-    /* service center */
 
-    .dial {
-        width: 100%;
-        overflow: hidden;
-        display: table;
-        border: solid 2px #ea635c;
-        box-sizing: border-box;
-        margin-bottom: 120px;
-    }
-    .dial .to_tb01 {
-        background: #ea635c;
-        color: #fff;
-        font-size: 16px;
-        text-align: center;
-        display: table-cell;
-        width: 41.14%;
-        vertical-align: middle;
-    }
+.accordion-details summary .q {
+padding-left: 2rem;
+font-size: 0.8125rem;
+font-weight: bold;
+}
+
+
+
+.accordion-details summary::-webkit-details-marker {
+    display: none;
+}
+.accordion-details summary::after {
+    transform: translateY(-25%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+    border-bottom: 3px solid #333333b3;
+    border-right: 3px solid #333333b3;
+    content: '';
+    transition: transform .3s;
+    position: absolute;
+    right: 0;
+}
+
+.accordion-details[open] summary::after {
+    transform: rotate(225deg);
+}
+
+.accordion-details p {
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0;
+    padding: 1em 2em;
+    color: #333333;
+    transition: transform .5s, opacity .5s;
+}
+
+.accordion-details[open] p {
+    transform: none;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* service center */
+
+.dial {
+    width: 100%;
+    overflow: hidden;
+    display: table;
+    border: solid 2px #ea635c;
+    box-sizing: border-box;
+    margin-bottom: 120px;
+}
+.dial .to_tb01 {
+    background: #ea635c;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    display: table-cell;
+    width: 41.14%;
+    vertical-align: middle;
+}
+.dial .to_tb02 {
+    text-align: center;
+    display: table-cell;
+    width: 58.86%;
+    vertical-align: middle;
+    padding: 13px;
+}
+
+@media only screen and (max-width: 767px){
     .dial .to_tb02 {
-        text-align: center;
-        display: table-cell;
-        width: 58.86%;
-        vertical-align: middle;
-        padding: 13px;
+        border: solid 1px #ea635c;
+        display: block;
+        width: 100%;
     }
+}
 
-    @media only screen and (max-width: 767px){
-        .dial .to_tb02 {
-            border: solid 1px #ea635c;
-            display: block;
-            width: 100%;
-        }
+
+@media only screen and (max-width: 767px){
+    .dial .to_tb01 {
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        padding: 10px 0;
     }
-
-
-    @media only screen and (max-width: 767px){
-        .dial .to_tb01 {
-            font-size: 14px;
-            display: block;
-            width: 100%;
-            padding: 10px 0;
-        }
-    }
+}
 
 
 
-    /* footer start */
+
+
+
+/* footer start */
 .footer_container {
-    line-height: 1.8;
-    background-color: #dae2f4;
-    width: auto;
-    height: auto;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    position: static;
-    padding-right: 40px;
-    padding-left: 40px;
+line-height: 1.8;
+background-color: #dae2f4;
+width: auto;
+height: auto;
+padding-top: 25px;
+padding-bottom: 25px;
+position: static;
+padding-right: 40px;
+padding-left: 40px;
 }
 .footer_copy {
-    color: #23366f;
-    line-height: 1.5;
-    text-align: center;
-    font-family: "Arial", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+color: #23366f;
+line-height: 1.5;
+text-align: center;
+font-family: "Arial", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
 }
 
 @media print, screen and (max-width: 750px){
-    .footer_container{
-        margin-top: 16vw;
-        padding-top: 5.33vw;
-        padding-bottom: 5.33vw;
-    }
-    .footer_copy {
-        margin-top: 0;
-        font-size: 3.46vw;
-    }
+.footer_container{
+    margin-top: 16vw;
+    padding-top: 5.33vw;
+    padding-bottom: 5.33vw;
+}
+.footer_copy {
+    margin-top: 0;
+    font-size: 3.46vw;
+}
 }
