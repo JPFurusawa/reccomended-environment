@@ -656,11 +656,15 @@ h3 {
     margin: 0 auto;
 }
 
+
+/* FAQ Accordion */
+
 .accordion-faq {
     background-color: #fff;
     box-sizing: border-box;
     border: 4px solid #f2f2f2;
     padding: 10px;
+    margin: 0px auto 60px;
 }
 @media only screen and (max-width: 767px){
     .contractor_faq .question {
@@ -673,7 +677,7 @@ h3 {
 
 
     .accordion-details {
-        max-width: 500px;
+        /* max-width: 500px; */
         margin-bottom: 7px;
         border-bottom: 2px solid #d6dde3;
     }
