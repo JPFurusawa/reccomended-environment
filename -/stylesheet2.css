@@ -568,10 +568,10 @@ z-index: 9;
 
 @media print, screen and (max-width: 750px){
     .l-Mainvisual--Bg {
-        height: 53.33vw;
+        height: 25vw;
     }
     .l-Mainvisual--Bg .l-Mainvisual__Title--Small {
-        font-size: 7.46vw;
+        font-size: 3.73vw;
     }
 }
 /* タイトル箇所 */
