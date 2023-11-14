@@ -266,7 +266,7 @@ body {
     height: inherit;
     min-width: 320px;
     color: #555;
-    font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-family: "ZurichSans-Regular","メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-weight: normal;
     line-height: 1.8;
     word-break: break-all;
@@ -531,7 +531,6 @@ z-index: 9;
     height: 90px;
     background: #f6f6f6;
     text-align: left;
-    margin-bottom: 20px;
 }
 .l-Mainvisual--Bg .l-Mainvisual__Text, .l-Mainvisual--Bg .l-Mainvisual__Text--White {
     height: 100%;
@@ -547,7 +546,7 @@ z-index: 9;
     line-height: 1.8;
 }
 .l-Mainvisual--Bg .l-Mainvisual__Title--Small {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
 }
 
@@ -556,7 +555,7 @@ z-index: 9;
         height: 25vw;
     }
     .l-Mainvisual--Bg .l-Mainvisual__Title--Small {
-        font-size: 3.73vw;
+        font-size: 5vw;
     }
 }
 /* タイトル箇所 */
@@ -623,6 +622,7 @@ h3 {
     width: 100%;
     padding: 0;
     margin: 0px auto 40px;
+    max-width: 950px;
 }
 .container .inner-wrap {
     display: block;
