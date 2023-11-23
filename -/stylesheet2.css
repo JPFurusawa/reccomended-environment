@@ -761,9 +761,58 @@ h3 {
     }
 }
 
+/* 電話番号 */
+.flex-row {
+    flex-direction: row!important;
+}
+.d-flex {
+    display: flex!important;
+}
+.icon {
+    display: inline-block;
+    font-size: 22px;
+    height: 22px;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+    width: 22px;
+    color: #2167ae;
+}
+.icon--phone_24_solid:before {
+    content: "\ea8c";
+}
+.icon:before {
+    speak: none;
+    font-family: zurich-icons;
+    font-size: inherit;
+    font-style: normal;
+    font-weight: 400;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+.font-size-sm {
+    font-size: var(--font-size-sm)!important;
+}
+.ml-2, .mx-2 {
+    margin-left: 0.5rem!important;
+}
+a, button {
+    color: #23366f;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.w-100 {
+    margin-top: 10px;
+    width: 100%;
+}
+.font-z-blue {
+    color: #23366f;
+}
 
-
-
+.margin-top-50 {
+    margin-top: 50px!important;
+}
 
 
 /* footer start */

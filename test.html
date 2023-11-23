@@ -11,21 +11,21 @@
         <h1 id="device"></h1>
     </div>
     <script>
-        const os = "Other"
+        var os = "Other"
         const getMobileOS = () => {
             const ua = navigator.userAgent
             if (/android/i.test(ua)) {
                 return "Android";
-                const os = 'Android';
+                var os = 'Android';
             }
             else if (/iPad|iPhone|iPod/.test(ua)) //|| (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
             {
                 return "iOS";
-                const os = 'iOS';
+                 var os = 'iOS';
             }
             else {
                 return "Other";
-                const os = 'Other';
+                var os = 'Other';
             }
             };
         if (os === "Android") {
