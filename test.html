@@ -11,13 +11,12 @@
         <h1 id="device"></h1>
     </div>
     <script>
-        var os = "NA"
         const getMobileOS = () => {
             const ua = navigator.userAgent
             if (/android/i.test(ua)) {
                 return "Android";
             }
-            else if (/iPad|iPhone|iPod/.test(ua)) //|| (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+            else if (/iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))
             {
                 return "iOS";
             }
@@ -25,13 +24,14 @@
                 return "Other";
             }
             };
+
+        var os = getMobileOS();
+
         if (os === "Android") {
             document.getElementById("device").innerHTML ="Android";
-        }
-        else if (os === "iOS") {
+        }   else if (os === "iOS") {
             document.getElementById("device").innerHTML ="iOS";
-        }
-        else{
+        }   else {
             document.getElementById("device").innerHTML ="Other";
         }
     </script>
