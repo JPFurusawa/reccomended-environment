@@ -11,7 +11,7 @@
         <h1 id="device"></h1>
     </div>
     <script>
-        var os = "Other"
+        var os = "NA"
         const getMobileOS = () => {
             const ua = navigator.userAgent
             if (/android/i.test(ua)) {
@@ -21,7 +21,7 @@
             else if (/iPad|iPhone|iPod/.test(ua)) //|| (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
             {
                 return "iOS";
-                 var os = 'iOS';
+                var os = 'iOS';
             }
             else {
                 return "Other";
