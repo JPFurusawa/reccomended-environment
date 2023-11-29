@@ -5,7 +5,45 @@
 <body>
     <a href="#" onclick="launchApp()">[miniアプリを起動する]</a>
     <a href="dpayment://miniapp?miniapp_id=dmpgamWBhKB6FjZa">[スキーマのみver]</a>
-<script>
+
+    <script>
+        function launchApp() {
+            if (
+                navigator.userAgent.indexOf('iPhone') > 0
+                || navigator.userAgent.indexOf('iPad') > 0
+                || navigator.userAgent.indexOf('iPod') > 0
+            ) {
+                window.location.href = "dpayment://miniapp?miniapp_id=dmpgamWBhKB6FjZa";
+                var time = (new Date()).getTime();
+                setTimeout(function() {
+                    var now = (new Date()).getTime();
+
+                    if ((now - time) < 2000) {
+                        window.location.href = "https://itunes.apple.com/jp/app/id1328132872?mt=8";
+
+                    }
+                }, 1900);
+            } else if (navigator.userAgent.indexOf('Android') > 0) {
+                var appInstalled = false;
+
+                // Check if the app is installed on Android
+                // Replace "your.package.name" with the actual package name of your app
+                var iframe = document.createElement('iframe');
+                iframe.style.display = "none";
+                iframe.src = "dpayment://miniapp?miniapp_id=dmpgamWBhKB6FjZa";
+                document.body.appendChild(iframe);
+
+                setTimeout(function() {
+                    document.body.removeChild(iframe);
+                    if (!appInstalled) {
+                        window.location.href = "https://play.google.com/store/apps/details?id=your.package.name";
+                    }
+                }, 2000);
+            }
+        };
+    </script>
+
+    <!-- <script>
     function launchApp() {
         if (
           navigator.userAgent.indexOf('iPhone') > 0
@@ -25,9 +63,9 @@
         }
         else if(navigator.userAgent.indexOf('Android') > 0)
         {
-                        document.location = "dpayment://miniapp?miniapp_id=dmpgamWBhKB6FjZa";
+            document.location = "dpayment://miniapp?miniapp_id=dmpgamWBhKB6FjZa";
         }
     };
-</script>
+</script> -->
 </body>
 </html>

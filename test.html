@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style type="text/css">
+        .android {
+            display: block;
+        }
+        .ios {
+            display: block;
+        }
+        .others {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <div>
-        <h1>OS判定</h1>
+        <!-- <h1>OS判定</h1> -->
         <h1 id="device"></h1>
+        <div id="android" class="android">Google Play Store</div>
+        <div id="ios" class="ios">Apple Store</div>
+        <div id="others" class="others">TBD</div>
     </div>
     <script>
         const getMobileOS = () => {
@@ -26,13 +40,24 @@
             };
 
         var os = getMobileOS();
+        let android_el = document.getElementById('android');
+        let ios_el = document.getElementById('ios');
+        let others_el = document.getElementById('others');
 
         if (os === "Android") {
-            document.getElementById("device").innerHTML ="Android";
+            android_el.style.display='block';
+            ios_el.style.display='none';
+            others_el.style.display='none';
+            //document.getElementById("device").innerHTML ="Android";
         }   else if (os === "iOS") {
-            document.getElementById("device").innerHTML ="iOS";
+            android_el.style.display='none';
+            ios_el.style.display='block';
+            others_el.style.display='none';
+            //document.getElementById("device").innerHTML ="iOS";
         }   else {
-            document.getElementById("device").innerHTML ="Other";
+            android_el.style.display='none';
+            ios_el.style.display='none';
+            others_el.style.display='block';
         }
     </script>
 
